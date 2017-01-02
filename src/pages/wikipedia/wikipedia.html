@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Wikipedia API</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<h2>Wikipedia Search</h2>
+<p>Enter something in the field and see the asynchronous results!</p>
+<input #input type="text" placeholder="Search" (keyup)="searchKey(input.value)">
+<ul>
+<li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
